@@ -1,4 +1,4 @@
-class Solution {
+class Satyam {
     public static double findMedianSortedArrays(int[] arr1, int[] arr2) {
         if(arr1.length==0) {
             return singleARRAYmedian(arr2);
