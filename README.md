@@ -1,6 +1,6 @@
 Here I Satyam Choubey will provide the Solution of LeetCode on daily basis |
 Solution will be uploaded on JAVA |
-However logic will be same for every language |
+However logic will be same for every language with some other concept as well |
 
 NOTE:- There can be better approach other than provided by me......... |
 
