@@ -1,0 +1,32 @@
+class Satyam {
+    public boolean isPalindrome(ListNode head) {
+        ListNode check = head;
+        int size = 0;
+        while(check!=null) {
+            size++;
+            check = check.next;
+        }
+       ListNode temp1 = head; 
+       int[] arr = new int[size];
+       int i=0;
+       while(temp1!=null) {
+        arr[i] = temp1.val;
+        temp1 = temp1.next;
+        i++;
+       }
+    
+       int count = 0;
+       for(int j=arr.length-1;j>=0;j--) {
+        if(head.val==arr[j]) {
+            count++;
+        }
+        head = head.next;
+       }
+       if(count==arr.length) {
+        return true;
+       }
+       else {
+        return false;
+       }
+    }
+}
