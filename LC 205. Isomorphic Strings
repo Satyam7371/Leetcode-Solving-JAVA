@@ -1,0 +1,26 @@
+class Satyam {
+    public boolean isIsomorphic(String s, String t) {
+        int n = s.length();
+        int m = t.length();
+        Map<Character,Character> mp1 = new HashMap<>();
+        Map<Character,Character> mp2 = new HashMap<>();
+        if(n!=m) {
+            return false;
+        }
+        try {
+        for(int i=0;i<n;i++) {
+            if(!mp1.containsKey(s.charAt(i)) && !mp2.containsKey(t.charAt(i))) {
+                mp1.put(s.charAt(i),t.charAt(i));
+                mp2.put(t.charAt(i),s.charAt(i));
+            }
+            else if(mp1.get(s.charAt(i))!=t.charAt(i)) {
+                return false;
+            }
+        }
+        }
+        catch(NullPointerException e) {
+            return false;
+        }
+        return true;
+    }
+}
